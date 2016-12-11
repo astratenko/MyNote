@@ -1,4 +1,3 @@
-
 .notesList {
     font-family: Arial, sans-serif;
     font-size: 18px;
@@ -26,8 +25,30 @@
     border-color: #ccc;
     color: #333;
     background-color: #f0f0f0;
+    height: 250px;
+    width: 300px;
 }
 
 .smallContext {
     font-size: 12px;
 }
+/************ PopUp style Start *************/
+.b-popup {
+    width: 100%;
+    min-height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    position: fixed;
+    top: 0px;
+}
+
+.b-popup .b-popup-content {
+    margin: 40px auto 0px auto;
+    width: 500px;
+    height: 350px;
+    padding: 10px;
+    background-color: #c5c5c5;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #000;
+}
+/************** PopUp style End **************/

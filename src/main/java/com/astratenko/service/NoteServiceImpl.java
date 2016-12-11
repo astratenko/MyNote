@@ -2,12 +2,16 @@ package com.astratenko.service;
 
 import com.astratenko.DAO.NoteDAO;
 import com.astratenko.model.Note;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-
+@Component
 public class NoteServiceImpl implements NoteService {
+
+    @Autowired
     private NoteDAO noteDAO;
 
     public void setNoteDAO(NoteDAO noteDAO) {
