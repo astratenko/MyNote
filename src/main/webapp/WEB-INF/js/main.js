@@ -19,7 +19,7 @@ $(document).ready(function() {
     });
 });
 
-function send(){
+send: function (){
     $.ajax({
         url:"/getFullNoteText",
         data : ({name : $('#noteId').val()}),
