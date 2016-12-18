@@ -1,33 +1,34 @@
-$(document).ready(function(){
+$(document).ready(function () {
     //Скрыть PopUp при загрузке страницы
     PopUpHide();
 });
 //Функция отображения PopUp
-function PopUpShow(){
+function PopUpShow() {
     $("#popup1").show();
 }
 //Функция скрытия PopUp
-function PopUpHide(){
+function PopUpHide() {
     $("#popup1").hide();
 }
 
-function doAjax() {
 
-    var inputText = $("#input_str").val();
+/*Ajax*/
+$(document).ready(function() {
+    $("#notesFullTextDiv").click(function(){
+        send();
+    });
+});
 
+function send(){
     $.ajax({
-        url: 'getCharNum',
-        type: 'GET',
-        dataType: 'json',
-        contentType: 'application/json',
-        mimeType: 'application/json',
-        data: ({
-            text: inputText
-        }),
-        success: function (data) {
-
-            var result = '"' + data.text + '", ' + data.count + ' characters';
-            $("#result_text").text(result);
+        url:"/getFullNoteText",
+        data : ({name : $('#noteId').val()}),
+        success : function(data){
+            $('#notesFullTextDiv').html(data);
+        },
+        error : function(data){
+            console.log("error: "+data);
         }
     });
 }
+

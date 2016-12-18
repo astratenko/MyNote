@@ -66,22 +66,12 @@ public class NoteController {
     }
 
     //AJAX response
-    @RequestMapping(value = "/", method = RequestMethod.GET)
-    public String home(Locale locale, Model model) {
-        return "notes";
-    }
 
-    @RequestMapping(value = "/getCharNum", method = RequestMethod.GET)
+    @RequestMapping(value = "/getFullNoteText", method = RequestMethod.GET, produces = { "text/html"})
     public @ResponseBody
-    Response getCharNum(@RequestParam String text) {
+    String openFullNote(@RequestParam int noteId) {
 
-        Response result = new Response();
 
-        if (text != null) {
-            result.setText(text);
-            result.setCount(text.length());
-        }
-
-        return result;
+        return "";
     }
 }

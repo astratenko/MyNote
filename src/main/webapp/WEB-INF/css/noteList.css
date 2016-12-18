@@ -2,36 +2,43 @@
     font-family: Arial, sans-serif;
     font-size: 18px;
     padding: 10px 5px;
-    border-style: solid;
+    border-style: outset;
     border-width: 1px;
     overflow: hidden;
     word-break: normal;
     border-color: #ccc;
     color: #333;
     background-color: #fff;
-    width: 300px;
-    margin-left: inherit
+    width: 400px;
+}
+
+.contextInList {
+    font-size: 12px;
 }
 
 .noteContext {
-    font-family: Arial, sans-serif;
+    font-family: Arial, serif;
     font-size: 14px;
     font-weight: normal;
-    padding: 10px 5px;
-    border-style: solid;
+    padding: 10px 5px 0 20px;
+    border-style: inset;
     border-width: 1px;
-    overflow: hidden;
+    overflow: auto;
     word-break: normal;
     border-color: #ccc;
     color: #333;
     background-color: #f0f0f0;
     height: 250px;
-    width: 300px;
+    width: 600px
 }
 
-.smallContext {
-    font-size: 12px;
+.noteContextWindow{
+    margin-left: 10px;
+    float: left;
+    overflow: auto;
 }
+
+
 /************ PopUp style Start *************/
 .b-popup {
     width: 100%;
