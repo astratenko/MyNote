@@ -14,7 +14,7 @@ function PopUpHide() {
 
 /*Ajax*/
 $(document).ready(function() {
-    $("#notesFullTextDiv").click(function(){
+    $("${note.id}").click(function(){
         send();
     });
 });
